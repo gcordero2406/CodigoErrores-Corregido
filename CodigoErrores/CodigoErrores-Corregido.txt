@@ -1,0 +1,15 @@
+Error 1 - Rango en el for:
+
+El arreglo tiene un tamaño de 5 (0-4). Con <= el for corría 6 veces, intentando acceder a catalogo[5] que no existe. Se corrigió a < para que así recorra solo 5 veces.
+
+Error 2 - Tipo de dato:
+
+No tenía sentido leer la cantidad como double para luego pasarla a int al meterla en la matriz, porque si la matriz tenia tipos de datos en int no se ocupaba cambiarla a double. Se corrigió leyendo directamente como int.
+
+Error 3 - Parámetros:
+
+La variable contador estaba declarado dentro del Main y se llamaba como parámetro a las funciones, entonces el contador++ dentro de la función no cambiaba al original y siempre se reiniciaba a 0, sobrescribiendo siempre la fila 0 de la matriz. Lo solucione declarándolo como variable global contador.
+
+Error 4 - MostrarRegistros:
+
+Solo se imprimía el nombre del ítem pero no la cantidad ni el estado. Se agregaron las líneas faltantes para mostrar todas las columnas de la matriz. 
